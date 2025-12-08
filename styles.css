@@ -99,11 +99,12 @@ body {
     margin: 0; /* Usuwa domyślne marginesy przeglądarki z body */
     padding: 0; /* Usuwa domyślny padding */
 }
-/* --- Stylizacja Pojemnika Głównego (Ciemne Tło Karty) --- */
+/* --- Stylizacja Pojemnika Głównego (Dostosowanie do dużych ekranów) --- */
 .standings-card {
-    width: 100%; 
-    /* KLUCZOWA ZMIANA: Zwiększamy maksymalną szerokość, aby pomieścić 9 kolumn */
-    max-width: 700px;  
+    /* Ustawiamy na 90%, aby zostawić marginesy boczne na szerokich ekranach */
+    width: 90%; 
+    /* KLUCZOWA ZMIANA: Zwiększona max-width, aby pomieścić 9 kolumn bez ściskania */
+    max-width: 1000px;  /* Zapewnia dużo miejsca dla 9 kolumn */
     margin: 50px auto; 
     background-color: #1a1a1a; 
     color: #ffffff; 
@@ -111,11 +112,6 @@ body {
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
-}
-
-/* --- Nagłówek 'Current Standings' i pozostałe style tabeli pozostają bez zmian --- */
-/* (Ponieważ były już poprawne, tylko kontener był za wąski) */
-/* ... reszta kodu CSS dla h2, .standings-table, thead, tbody, td, th ... */
 }
 
 /* --- Nagłówek 'Current Standings' --- */
@@ -128,14 +124,14 @@ body {
     border-bottom: 1px solid #333333;
 }
 
-/* --- Stylizacja Właściwej Tabeli (Korekta Szerokości i Odstępów) --- */
+/* --- Stylizacja Właściwej Tabeli (KLUCZOWE KOREKTY RESPONSZYWNOŚCI) --- */
 .standings-table {
-    /* Zmieniono na 100%, aby pasowała do kontenera (.standings-card) */
-    width: 90%; 
+    /* Zmieniamy na 100%, aby tabela zawsze wypełniała kontener .standings-card */
+    width: 100%; 
     border-collapse: collapse; 
     text-align: left;
     
-    /* Zachowujemy blokowe wyświetlanie i przewijanie dla bezpieczeństwa */
+    /* Zachowujemy to, aby tabela przewijała się poziomo na małych ekranach */
     display: block; 
     overflow-x: auto; 
 }
@@ -146,13 +142,17 @@ body {
     font-size: 20px;
     font-weight: 500;
     
-    /* ZMNIEJSZONY padding poziomy */
+    /* Utrzymujemy padding na 10px */
     padding: 10px 10px; 
     
     border-bottom: 2px solid #333333; 
     
-    /* ZMNIEJSZONA minimalna szerokość kolumny */
+    /* Utrzymujemy min-width 80px */
     min-width: 80px; 
+    
+    /* KLUCZOWE dla równego rozłożenia przestrzeni na dużych ekranach */
+    width: calc(100% / 9); 
+    box-sizing: border-box;
 }
 
 /* Stylizacja wierszy w treści tabeli (TR) */
@@ -165,9 +165,13 @@ body {
     font-size: 16px;
     color: #f0f0f0;
     
-    /* ZMNIEJSZONY padding poziomy */
+    /* Utrzymujemy padding na 10px */
     padding: 12px 10px; 
     
-    /* ZMNIEJSZONA minimalna szerokość kolumny */
+    /* Utrzymujemy min-width 80px */
     min-width: 80px; 
+    
+    /* KLUCZOWE dla równego rozłożenia przestrzeni na dużych ekranach */
+    width: calc(100% / 9); 
+    box-sizing: border-box;
 }
