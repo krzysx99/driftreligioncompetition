@@ -121,14 +121,13 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid #333333; /* Separator pod nagłówkiem */
 }
-/* --- Stylizacja Właściwej Tabeli (Poprawiona dla 9 Kolumn) --- */
+/* --- Stylizacja Właściwej Tabeli (Poprawiona dla 9 Kolumn i Większej Przestrzeni) --- */
 .standings-table {
     width: 100%;
     border-collapse: collapse; 
     text-align: left;
     
-    /* KLUCZOWE dla szerokich tabel: Umożliwia przewijanie tabeli w poziomie, 
-       jeśli jest zbyt szeroka na małym ekranie. */
+    /* Umożliwia przewijanie w poziomie na małych ekranach */
     display: block; 
     overflow-x: auto; 
 }
@@ -139,13 +138,13 @@ body {
     font-size: 14px;
     font-weight: 500;
     
-    /* Dodajemy padding poziomy dla odstępu między kolumnami */
-    padding: 10px 10px; 
+    /* Zwiększony padding poziomy dla większej czytelności */
+    padding: 10px 15px; 
     
     border-bottom: 2px solid #333333; 
     
-    /* Ustawiamy minimalną szerokość, aby kolumny się nie ściskały */
-    min-width: 80px; 
+    /* Zwiększona minimalna szerokość kolumny */
+    min-width: 90px; 
 }
 
 /* Stylizacja wierszy w treści tabeli (TR) */
@@ -158,12 +157,9 @@ body {
     font-size: 16px;
     color: #f0f0f0;
     
-    /* Dodajemy padding poziomy dla odstępu między kolumnami */
-    padding: 12px 10px; 
+    /* Zwiększony padding poziomy dla większej czytelności */
+    padding: 12px 15px; 
     
-    /* Ustawiamy minimalną szerokość, aby kolumny się nie ściskały */
-    min-width: 80px; 
+    /* Zwiększona minimalna szerokość kolumny */
+    min-width: 90px; 
 }
-
-/* Usunąłem nieużywane, sztywne ustawienia szerokości dla kolumn :nth-child(1) i :nth-child(3),
-   ponieważ zaburzały one układ 9 kolumn. */
