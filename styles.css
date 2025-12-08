@@ -99,17 +99,23 @@ body {
     margin: 0; /* Usuwa domyślne marginesy przeglądarki z body */
     padding: 0; /* Usuwa domyślny padding */
 }
-/* --- Stylizacja Pojemnika Głównego (Bez zmian, ale uwaga na max-width) --- */
+/* --- Stylizacja Pojemnika Głównego (Ciemne Tło Karty) --- */
 .standings-card {
     width: 90%; 
-    max-width: 700px; 
+    /* KLUCZOWA ZMIANA: Zwiększamy maksymalną szerokość, aby pomieścić 9 kolumn */
+    max-width: 1000px;  
     margin: 50px auto; 
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; 
     color: #ffffff; 
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
+}
+
+/* --- Nagłówek 'Current Standings' i pozostałe style tabeli pozostają bez zmian --- */
+/* (Ponieważ były już poprawne, tylko kontener był za wąski) */
+/* ... reszta kodu CSS dla h2, .standings-table, thead, tbody, td, th ... */
 }
 
 /* --- Nagłówek 'Current Standings' --- */
