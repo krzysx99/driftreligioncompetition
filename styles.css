@@ -103,7 +103,7 @@ body {
 .standings-card {
     width: 100%; 
     /* KLUCZOWA ZMIANA: Zwiększamy maksymalną szerokość, aby pomieścić 9 kolumn */
-    max-width: 1000px;  
+    max-width: 700px;  
     margin: 50px auto; 
     background-color: #1a1a1a; 
     color: #ffffff; 
