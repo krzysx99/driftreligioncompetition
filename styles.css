@@ -2,68 +2,61 @@
 /* STYLES.CSS - KOMPLETNY KOD PASKU             */
 /* ======================================================= */
 
-/* --- 1. Główne style paska nawigacyjnego (.top-navbar) --- */
+/* --- Stylizacja Pojemnika Głównego (.top-navbar) --- */
 .top-navbar {
-    background-color: #000000; /* Czarne tło */
+    background-color: #000000;
     color: #ffffff;
     padding: 10px 40px; 
-    display: flex; /* Użycie Flexbox do ułożenia elementów w rzędzie */
-    /* Zmieniono na flex-start, aby linki mogły być wyśrodkowane za pomocą auto-margin */
+    display: flex; 
     justify-content: flex-start; 
-    align-items: center; /* Wyśrodkowanie elementów pionowo */
+    align-items: center; 
     height: 60px; 
-    font-family: Arial, sans-serif; /* Przykładowa czcionka */
-    box-sizing: border-box; /* Zapewnia, że padding nie zwiększa wysokości */
-    /* ... pozostałe style ... */
-    border-bottom: 1px solid #ffcc00; /* Cienka żółta linia na dole paska */
-    /* LUB */
-    /* border-bottom: 1px solid #333333; *//* Bardziej subtelna, ciemnoszara linia */
-    /* Zmieniamy tło paska na bardzo ciemny szary, reszta strony pozostaje czarna */
-    background-color: #111111; /* Bardzo ciemny szary, zamiast czarnego */
-    /* ... pozostałe style ... */
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #ffcc00; /* Linia separująca pasek, jeśli chcesz ją zachować */
 }
 
-/* --- 2. Stylizacja Logotypu (Built Master) --- */
+/* --- Stylizacja Linku Logotypu --- */
+.logo-link {
+    text-decoration: none;
+    color: inherit; 
+    display: flex; 
+    align-items: center;
+    margin-right: 20px; 
+    min-width: 60px; /* Zmniejszamy minimalną szerokość dla mniejszego loga */
+}
+
+/* --- Stylizacja Kontenera Logotypu (bez żółtego półokręgu) --- */
 .logo-container {
     display: flex;
     align-items: center;
-    position: relative; /* Kontener do pozycjonowania półokręgu */
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 0.8; /* Pomaga zbliżyć linie tekstu */
-    /* Ustawienie sztywnych marginesów po prawej, aby linki nie kleiły się do logo */
-    margin-right: 20px; 
-    min-width: 120px; /* Minimalna szerokość, by utrzymać pozycję */
-}
-/* Dodajemy stylizację, aby link z logo wyglądał jak zwykły tekst */
-.logo-link {
-    text-decoration: none; /* Usuwa podkreślenie pod logotypem */
-    color: inherit; /* Sprawia, że kolor dziedziczy z rodzica (lub jest ustawiany przez .logo-container) */
-    /* Zapewniamy, że logo-link jest również elementem flex, aby dobrze się ustawiał na pasku: */
-    display: flex; 
-    align-items: center;
+    position: relative;
+    /* USUŃ lub ZAKOMENTUJ całą regułę ::after, aby pozbyć się żółtego półokręgu: */
+    /*
+    .logo-container::after { 
+        content: ''; 
+        position: absolute; 
+        ...
+    }
+    */
 }
 
-/* Tekst logotypu (biały) */
+/* --- KLUCZOWA ZMIANA: Skalowanie Obrazka Logo --- */
+.logo-container img {
+    /* Ustawienie maksymalnej wysokości na 30px (jeśli pasek ma 60px wysokości, to będzie 2x mniejsze) */
+    height: 30px; 
+    /* Zapewnia skalowanie bez zniekształceń */
+    width: auto; 
+    display: block;
+}
+
+/* --- Upewnij się, że usunąłeś te reguły, jeśli istnieją, ponieważ odnosiły się do starego tekstu --- */
+/*
 .logo-text, .logo-text-master {
-    color: #ffffff;
-    z-index: 2; /* Tekst jest nad półokręgiem */
-    text-transform: uppercase;
+    ...
 }
+*/
 
-/* Żółty półokrąg pod logiem (pseudoelement ::after) */
-.logo-container::after {
-    content: '';
-    position: absolute;
-    width: 70px; 
-    height: 70px; 
-    border: 3px solid #ffcc00; /* Żółta krawędź */
-    border-radius: 50%; /* Okrągły kształt */
-    border-top-color: transparent; /* Ukrywa górną część krawędzi */
-    left: -15px; 
-    bottom: -10px; 
-    transform: rotate(20deg); 
-    z-index: 1; 
+/* --- Reszta stylu dla .nav-links pozostaje bez zmian --- */
 }
 
 
