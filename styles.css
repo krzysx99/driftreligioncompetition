@@ -1,0 +1,82 @@
+/* Główne style paska */
+.top-navbar {
+    background-color: #000000; /* Czarne tło */
+    color: #ffffff; /* Domyślny biały kolor tekstu */
+    padding: 10px 40px; /* Wewnętrzny margines */
+    display: flex; /* Użycie Flexbox do ułożenia elementów w rzędzie */
+    justify-content: space-between; /* Rozsuwa elementy na boki */
+    align-items: center; /* Wyśrodkowuje pionowo */
+    height: 60px; /* Ustalona wysokość paska */
+    font-family: Arial, sans-serif; /* Przykładowa czcionka */
+}
+
+/* --- Logotyp --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative; /* Umożliwia pozycjonowanie półokręgu */
+    font-size: 24px;
+    font-weight: bold;
+    /* Tworzymy żółty półokrąg za pomocą pseudoelementu ::after */
+}
+
+.logo-container::after {
+    content: '';
+    position: absolute;
+    width: 60px; /* Szerokość półokręgu */
+    height: 60px; /* Wysokość półokręgu */
+    border: 3px solid #ffcc00; /* Żółta krawędź */
+    border-radius: 50%; /* Okrągły kształt */
+    border-top-color: transparent; /* Ukrywa górną część, tworząc półokrąg na dole */
+    left: -5px; /* Pozycjonowanie względem tekstu */
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); /* Przesunięcie i obrót dla lepszego efektu */
+    z-index: 1; /* Upewnij się, że jest pod tekstem */
+}
+
+.logo-text, .logo-text-master {
+    line-height: 1; /* Poprawia pionowe wyrównanie */
+    z-index: 2; /* Upewnij się, że tekst jest nad półokręgiem */
+}
+
+.logo-text-master {
+    color: #ffcc00; /* Żółty kolor dla części "MASTER" (jeśli jest taka potrzeba, w oryginalnym obrazku jest biały, więc możesz to usunąć, jeśli wolisz jednolite białe logo) */
+}
+
+
+/* --- Linki nawigacyjne (środek) --- */
+.nav-links {
+    list-style: none; /* Usuwa domyślne kropki */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px; /* Odstęp między linkami */
+}
+
+.nav-links a {
+    color: #ffffff; /* Biały kolor linków */
+    text-decoration: none; /* Usuwa podkreślenie */
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Żółty kolor przy najechaniu */
+}
+
+/* --- Ikony i akcje (prawo) --- */
+.nav-icons a {
+    color: #ffcc00; /* Żółty kolor dla elementów po prawej */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 30px; /* Odstęp między elementami 'SEARCH' i 'LOGIN' */
+    text-transform: uppercase;
+}
+
+.nav-icons .icon {
+    /* Używa ikony z fontu, ewentualnie możesz użyć SVG/Image */
+    margin-left: 5px;
+}
