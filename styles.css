@@ -18,7 +18,9 @@
     border-bottom: 1px solid #ffcc00; /* Cienka żółta linia na dole paska */
     /* LUB */
     /* border-bottom: 1px solid #333333; *//* Bardziej subtelna, ciemnoszara linia */
-}
+    /* Zmieniamy tło paska na bardzo ciemny szary, reszta strony pozostaje czarna */
+    background-color: #111111; /* Bardzo ciemny szary, zamiast czarnego */
+    /* ... pozostałe style ... */
 }
 
 /* --- 2. Stylizacja Logotypu (Built Master) --- */
