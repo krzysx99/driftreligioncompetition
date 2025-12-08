@@ -35,6 +35,14 @@
     margin-right: 20px; 
     min-width: 120px; /* Minimalna szerokość, by utrzymać pozycję */
 }
+/* Dodajemy stylizację, aby link z logo wyglądał jak zwykły tekst */
+.logo-link {
+    text-decoration: none; /* Usuwa podkreślenie pod logotypem */
+    color: inherit; /* Sprawia, że kolor dziedziczy z rodzica (lub jest ustawiany przez .logo-container) */
+    /* Zapewniamy, że logo-link jest również elementem flex, aby dobrze się ustawiał na pasku: */
+    display: flex; 
+    align-items: center;
+}
 
 /* Tekst logotypu (biały) */
 .logo-text, .logo-text-master {
