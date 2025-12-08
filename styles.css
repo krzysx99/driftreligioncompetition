@@ -77,3 +77,10 @@
 .nav-links li a:hover {
     color: #ffcc00; /* Żółty kolor przy najechaniu */
 }
+/* Ustawia czarne tło dla całej strony */
+body {
+    background-color: #000000; /* Używa czarnego koloru */
+    color: #ffffff; /* Opcjonalnie: Ustawia domyślny kolor tekstu na biały, aby był czytelny na czarnym tle */
+    margin: 0; /* Usuwa domyślne marginesy przeglądarki z body */
+    padding: 0; /* Usuwa domyślny padding */
+}
