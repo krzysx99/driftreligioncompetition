@@ -121,41 +121,49 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid #333333; /* Separator pod nagłówkiem */
 }
-
-/* --- Stylizacja Właściwej Tabeli --- */
+/* --- Stylizacja Właściwej Tabeli (Poprawiona dla 9 Kolumn) --- */
 .standings-table {
     width: 100%;
-    border-collapse: collapse; /* Usuwa podwójne linie między komórkami */
+    border-collapse: collapse; 
     text-align: left;
+    
+    /* KLUCZOWE dla szerokich tabel: Umożliwia przewijanie tabeli w poziomie, 
+       jeśli jest zbyt szeroka na małym ekranie. */
+    display: block; 
+    overflow-x: auto; 
 }
 
-/* Stylizacja nagłówków kolumn ( # | Driver | Points ) */
+/* Stylizacja nagłówków kolumn (TH) */
 .standings-table thead th {
-    color: #aaaaaa; /* Szary kolor dla nagłówków */
+    color: #aaaaaa; 
     font-size: 14px;
     font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 2px solid #333333; /* Grubsza linia pod nagłówkami */
+    
+    /* Dodajemy padding poziomy dla odstępu między kolumnami */
+    padding: 10px 10px; 
+    
+    border-bottom: 2px solid #333333; 
+    
+    /* Ustawiamy minimalną szerokość, aby kolumny się nie ściskały */
+    min-width: 80px; 
 }
 
-/* Stylizacja wierszy w treści tabeli */
+/* Stylizacja wierszy w treści tabeli (TR) */
 .standings-table tbody tr {
-    border-bottom: 1px solid #282828; /* Cienka linia oddzielająca wiersze */
+    border-bottom: 1px solid #282828; 
 }
 
-/* Stylizacja komórek (dane) */
+/* Stylizacja komórek (dane) (TD) */
 .standings-table tbody td {
-    padding: 12px 0;
     font-size: 16px;
     color: #f0f0f0;
+    
+    /* Dodajemy padding poziomy dla odstępu między kolumnami */
+    padding: 12px 10px; 
+    
+    /* Ustawiamy minimalną szerokość, aby kolumny się nie ściskały */
+    min-width: 80px; 
 }
 
-/* Ustawienie szerokości kolumn (opcjonalne, ale pomaga w wyrównaniu) */
-.standings-table th:nth-child(1),
-.standings-table td:nth-child(1) {
-    width: 10%; /* Kolumna # */
-}
-.standings-table th:nth-child(3),
-.standings-table td:nth-child(3) {
-    width: 30%; /* Kolumna Points */
-}
+/* Usunąłem nieużywane, sztywne ustawienia szerokości dla kolumn :nth-child(1) i :nth-child(3),
+   ponieważ zaburzały one układ 9 kolumn. */
