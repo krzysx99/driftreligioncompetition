@@ -99,15 +99,15 @@ body {
     margin: 0; /* Usuwa domyślne marginesy przeglądarki z body */
     padding: 0; /* Usuwa domyślny padding */
 }
-/* --- Stylizacja Pojemnika Głównego (Ciemne Tło Karty) --- */
+/* --- Stylizacja Pojemnika Głównego (Bez zmian, ale uwaga na max-width) --- */
 .standings-card {
-    width: 90%; /* Szerokość karty (dostosuj do potrzeb) */
+    width: 90%; 
     max-width: 700px; 
-    margin: 50px auto; /* Wyśrodkowanie na stronie */
-    background-color: #1a1a1a; /* Bardzo ciemny szary/czarny dla tła karty */
-    color: #ffffff; /* Biały tekst */
+    margin: 50px auto; 
+    background-color: #1a1a1a;
+    color: #ffffff; 
     padding: 20px;
-    border-radius: 8px; /* Lekko zaokrąglone rogi */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
 }
@@ -119,15 +119,17 @@ body {
     margin-top: 0;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #333333; /* Separator pod nagłówkiem */
+    border-bottom: 1px solid #333333;
 }
-/* --- Stylizacja Właściwej Tabeli (Poprawiona dla 9 Kolumn i Większej Przestrzeni) --- */
+
+/* --- Stylizacja Właściwej Tabeli (Korekta Szerokości i Odstępów) --- */
 .standings-table {
-    width: 120%;
+    /* Zmieniono na 100%, aby pasowała do kontenera (.standings-card) */
+    width: 100%; 
     border-collapse: collapse; 
     text-align: left;
     
-    /* Umożliwia przewijanie w poziomie na małych ekranach */
+    /* Zachowujemy blokowe wyświetlanie i przewijanie dla bezpieczeństwa */
     display: block; 
     overflow-x: auto; 
 }
@@ -138,13 +140,13 @@ body {
     font-size: 20px;
     font-weight: 500;
     
-    /* Zwiększony padding poziomy dla większej czytelności */
-    padding: 10px 15px; 
+    /* ZMNIEJSZONY padding poziomy */
+    padding: 10px 10px; 
     
     border-bottom: 2px solid #333333; 
     
-    /* Zwiększona minimalna szerokość kolumny */
-    min-width: 90px; 
+    /* ZMNIEJSZONA minimalna szerokość kolumny */
+    min-width: 80px; 
 }
 
 /* Stylizacja wierszy w treści tabeli (TR) */
@@ -157,9 +159,9 @@ body {
     font-size: 16px;
     color: #f0f0f0;
     
-    /* Zwiększony padding poziomy dla większej czytelności */
-    padding: 12px 15px; 
+    /* ZMNIEJSZONY padding poziomy */
+    padding: 12px 10px; 
     
-    /* Zwiększona minimalna szerokość kolumny */
-    min-width: 90px; 
+    /* ZMNIEJSZONA minimalna szerokość kolumny */
+    min-width: 80px; 
 }
