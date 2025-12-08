@@ -49,17 +49,6 @@
     display: block;
 }
 
-/* --- Upewnij się, że usunąłeś te reguły, jeśli istnieją, ponieważ odnosiły się do starego tekstu --- */
-/*
-.logo-text, .logo-text-master {
-    ...
-}
-*/
-
-/* --- Reszta stylu dla .nav-links pozostaje bez zmian --- */
-}
-
-
 /* --- 3. Linki nawigacyjne (środek paska) --- */
 .nav-links {
     list-style: none; /* Usuwa domyślne kropki */
