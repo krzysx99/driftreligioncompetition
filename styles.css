@@ -101,7 +101,7 @@ body {
 }
 /* --- Stylizacja Pojemnika Głównego (Ciemne Tło Karty) --- */
 .standings-card {
-    width: 80%; /* Szerokość karty (dostosuj do potrzeb) */
+    width: 100%; /* Szerokość karty (dostosuj do potrzeb) */
     max-width: 600px; 
     margin: 50px auto; /* Wyśrodkowanie na stronie */
     background-color: #1a1a1a; /* Bardzo ciemny szary/czarny dla tła karty */
@@ -114,7 +114,7 @@ body {
 
 /* --- Nagłówek 'Current Standings' --- */
 .standings-card h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 20px;
@@ -135,7 +135,7 @@ body {
 /* Stylizacja nagłówków kolumn (TH) */
 .standings-table thead th {
     color: #aaaaaa; 
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
     
     /* Zwiększony padding poziomy dla większej czytelności */
