@@ -14,6 +14,11 @@
     height: 60px; 
     font-family: Arial, sans-serif; /* Przykładowa czcionka */
     box-sizing: border-box; /* Zapewnia, że padding nie zwiększa wysokości */
+    /* ... pozostałe style ... */
+    border-bottom: 1px solid #ffcc00; /* Cienka żółta linia na dole paska */
+    /* LUB */
+    /* border-bottom: 1px solid #333333; *//* Bardziej subtelna, ciemnoszara linia */
+}
 }
 
 /* --- 2. Stylizacja Logotypu (Built Master) --- */
