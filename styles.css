@@ -101,7 +101,7 @@ body {
 }
 /* --- Stylizacja Pojemnika Głównego (Ciemne Tło Karty) --- */
 .standings-card {
-    width: 90%; 
+    width: 100%; 
     /* KLUCZOWA ZMIANA: Zwiększamy maksymalną szerokość, aby pomieścić 9 kolumn */
     max-width: 1000px;  
     margin: 50px auto; 
@@ -131,7 +131,7 @@ body {
 /* --- Stylizacja Właściwej Tabeli (Korekta Szerokości i Odstępów) --- */
 .standings-table {
     /* Zmieniono na 100%, aby pasowała do kontenera (.standings-card) */
-    width: 100%; 
+    width: 90%; 
     border-collapse: collapse; 
     text-align: left;
     
