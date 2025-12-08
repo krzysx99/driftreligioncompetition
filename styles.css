@@ -99,3 +99,63 @@ body {
     margin: 0; /* Usuwa domyślne marginesy przeglądarki z body */
     padding: 0; /* Usuwa domyślny padding */
 }
+/* --- Stylizacja Pojemnika Głównego (Ciemne Tło Karty) --- */
+.standings-card {
+    width: 80%; /* Szerokość karty (dostosuj do potrzeb) */
+    max-width: 600px; 
+    margin: 50px auto; /* Wyśrodkowanie na stronie */
+    background-color: #1a1a1a; /* Bardzo ciemny szary/czarny dla tła karty */
+    color: #ffffff; /* Biały tekst */
+    padding: 20px;
+    border-radius: 8px; /* Lekko zaokrąglone rogi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+}
+
+/* --- Nagłówek 'Current Standings' --- */
+.standings-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333333; /* Separator pod nagłówkiem */
+}
+
+/* --- Stylizacja Właściwej Tabeli --- */
+.standings-table {
+    width: 100%;
+    border-collapse: collapse; /* Usuwa podwójne linie między komórkami */
+    text-align: left;
+}
+
+/* Stylizacja nagłówków kolumn ( # | Driver | Points ) */
+.standings-table thead th {
+    color: #aaaaaa; /* Szary kolor dla nagłówków */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 2px solid #333333; /* Grubsza linia pod nagłówkami */
+}
+
+/* Stylizacja wierszy w treści tabeli */
+.standings-table tbody tr {
+    border-bottom: 1px solid #282828; /* Cienka linia oddzielająca wiersze */
+}
+
+/* Stylizacja komórek (dane) */
+.standings-table tbody td {
+    padding: 12px 0;
+    font-size: 16px;
+    color: #f0f0f0;
+}
+
+/* Ustawienie szerokości kolumn (opcjonalne, ale pomaga w wyrównaniu) */
+.standings-table th:nth-child(1),
+.standings-table td:nth-child(1) {
+    width: 10%; /* Kolumna # */
+}
+.standings-table th:nth-child(3),
+.standings-table td:nth-child(3) {
+    width: 30%; /* Kolumna Points */
+}
